@@ -1,0 +1,9 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+
+class Project(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="projects")
+    name = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    created_on = models.DateField(auto_now_add=True)
