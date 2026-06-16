@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from partapi.views import register_user, login_user, logout_user
+from partapi.views import register_user, login_user, logout_user, ProjectViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r"projects", ProjectViewSet, basename="project")
 
 urlpatterns = [
     path("", include(router.urls)),
