@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from partapi.models import Project, Component, Category
+from partapi.models import Project, Component, Category, ProjectComponent
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -21,3 +21,13 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ["id", "name", "description", "created_on"]
+
+
+class ProjectComponentSerializer(serializers.ModelSerializer):
+    component = ComponentSerializer(read_only=True)
+    component_id = serializers.IntegerField(write_only=True)
+    project_id = serializers.IntegerField(write_only=True)
+
+    class Meta:
+        model = ProjectComponent
+        fields = ["id", "component", "component_id", "project_id", "quantity"]

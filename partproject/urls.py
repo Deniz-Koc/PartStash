@@ -8,12 +8,16 @@ from partapi.views import (
     ProjectViewSet,
     ComponentViewSet,
     CategoryViewSet,
+    ProjectComponentViewSet,
 )
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"projects", ProjectViewSet, basename="project")
 router.register(r"components", ComponentViewSet, basename="component")
 router.register(r"categories", CategoryViewSet, basename="category")
+router.register(
+    r"project-components", ProjectComponentViewSet, basename="projectcomponent"
+)
 
 urlpatterns = [
     path("", include(router.urls)),
