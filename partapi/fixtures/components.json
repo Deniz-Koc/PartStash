@@ -1,0 +1,10 @@
+[
+  { "model": "partapi.component", "pk": 1, "fields": { "user": 1, "category": 1, "name": "Arduino Uno", "part_number": "A000066", "description": "ATmega328P dev board with 14 digital I/O pins" } },
+  { "model": "partapi.component", "pk": 2, "fields": { "user": 1, "category": 1, "name": "ESP32 DevKit", "part_number": "ESP32-WROOM", "description": "WiFi and Bluetooth microcontroller board" } },
+  { "model": "partapi.component", "pk": 3, "fields": { "user": 1, "category": 2, "name": "DHT22", "part_number": "DHT22", "description": "Temperature and humidity sensor" } },
+  { "model": "partapi.component", "pk": 4, "fields": { "user": 1, "category": 2, "name": "NEO-6M GPS", "part_number": "NEO6M", "description": "GPS module with antenna" } },
+  { "model": "partapi.component", "pk": 5, "fields": { "user": 1, "category": 3, "name": "Brushless Motor 2207", "part_number": "2207-1750", "description": "1750KV brushless motor for racing drones" } },
+  { "model": "partapi.component", "pk": 6, "fields": { "user": 1, "category": 3, "name": "SG90 Servo", "part_number": "SG90", "description": "9g micro servo motor" } },
+  { "model": "partapi.component", "pk": 7, "fields": { "user": 1, "category": 4, "name": "LiPo Battery 4S", "part_number": "4S-1500", "description": "1500mAh 4S LiPo battery" } },
+  { "model": "partapi.component", "pk": 8, "fields": { "user": 1, "category": 4, "name": "ESC 30A", "part_number": "BL30A", "description": "30A brushless ESC" } }
+]

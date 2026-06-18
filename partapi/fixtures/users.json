@@ -1,0 +1,20 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$oakqxni5prFDHbyL99Cx67$VCShELJXXOXAowHLI/5QnaRu5rtP9lvronursJt4iGE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "deniz",
+      "first_name": "Deniz",
+      "last_name": "Koc",
+      "email": "deniz@test.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-06-18T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
