@@ -1,0 +1,8 @@
+[
+  { "model": "partapi.category", "pk": 1, "fields": { "label": "Microcontroller" } },
+  { "model": "partapi.category", "pk": 2, "fields": { "label": "Sensor" } },
+  { "model": "partapi.category", "pk": 3, "fields": { "label": "Motor" } },
+  { "model": "partapi.category", "pk": 4, "fields": { "label": "Power" } },
+  { "model": "partapi.category", "pk": 5, "fields": { "label": "Frame" } },
+  { "model": "partapi.category", "pk": 6, "fields": { "label": "Other" } }
+]

@@ -1,0 +1,5 @@
+[
+  { "model": "partapi.project", "pk": 1, "fields": { "user": 1, "name": "Drone", "description": "FPV racing drone build", "created_on": "2024-03-15" } },
+  { "model": "partapi.project", "pk": 2, "fields": { "user": 1, "name": "Weather Station", "description": "Outdoor temperature and humidity logger", "created_on": "2024-05-10" } },
+  { "model": "partapi.project", "pk": 3, "fields": { "user": 1, "name": "Robot Arm", "description": "3-axis servo robot arm", "created_on": "2024-07-20" } }
+]
