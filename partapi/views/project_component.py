@@ -6,13 +6,15 @@ from partapi.serializers import ProjectComponentSerializer
 
 
 class ProjectComponentViewSet(viewsets.ViewSet):
-
     permission_classes = [IsAuthenticated]
 
     def list(self, request):
         project_components = ProjectComponent.objects.filter(
             project__user=request.auth.user
         )
+        project = request.query_params.get("project", None)
+        if project is not None:
+            project_components = project_components.filter(project_id=project)
         serializer = ProjectComponentSerializer(project_components, many=True)
         return Response(serializer.data)
 
