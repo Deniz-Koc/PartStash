@@ -25,9 +25,17 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 class ProjectComponentSerializer(serializers.ModelSerializer):
     component = ComponentSerializer(read_only=True)
+    project = ProjectSerializer(read_only=True)
     component_id = serializers.IntegerField(write_only=True)
     project_id = serializers.IntegerField(write_only=True)
 
     class Meta:
         model = ProjectComponent
-        fields = ["id", "component", "component_id", "project_id", "quantity"]
+        fields = [
+            "id",
+            "component",
+            "project",
+            "component_id",
+            "project_id",
+            "quantity",
+        ]

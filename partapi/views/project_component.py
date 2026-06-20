@@ -15,6 +15,9 @@ class ProjectComponentViewSet(viewsets.ViewSet):
         project = request.query_params.get("project", None)
         if project is not None:
             project_components = project_components.filter(project_id=project)
+        component = request.query_params.get("component", None)
+        if component is not None:
+            project_components = project_components.filter(component_id=component)
         serializer = ProjectComponentSerializer(project_components, many=True)
         return Response(serializer.data)
 
