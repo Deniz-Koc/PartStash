@@ -35,6 +35,12 @@ class ProjectComponentViewSet(viewsets.ViewSet):
         component = Component.objects.get(
             pk=request.data["component_id"], user=request.auth.user
         )
+        existing = ProjectComponent.objects.filter(project=project, component=component)
+        if existing.exists():
+            return Response(
+                {"message": "This component is already in the project."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         project_component = ProjectComponent.objects.create(
             project=project,
             component=component,
